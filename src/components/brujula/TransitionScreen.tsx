@@ -5,10 +5,7 @@ export function TransitionScreen() {
     <div className="fixed inset-0 z-50 grid place-items-center bg-background/95 backdrop-blur-md">
       <div className="fade-in-slow flex flex-col items-center text-center px-6 max-w-lg">
         <div className="relative">
-          <span
-            aria-hidden
-            className="absolute inset-0 rounded-full bg-primary/15 blur-2xl"
-          />
+          <span aria-hidden className="absolute inset-0 rounded-full bg-primary/15 blur-2xl" />
           <span className="relative grid h-20 w-20 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-elevated">
             <Compass className="h-10 w-10 compass-spin" strokeWidth={2} />
           </span>
@@ -19,8 +16,8 @@ export function TransitionScreen() {
         </h2>
 
         <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-          Estamos organizando la información que compartiste para identificar una primera
-          ruta de trabajo para tu organización.
+          Estamos organizando la información que compartiste para identificar una primera ruta de
+          trabajo para tu organización.
         </p>
 
         <div className="mt-8 flex items-center gap-1.5" aria-hidden>

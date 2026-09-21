@@ -157,11 +157,7 @@ function BrujulaApp() {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <TopBar />
-        <RutaInicial
-          challenge={challenge}
-          userAnswers={userAnswers}
-          onRevisit={revisitRuta}
-        />
+        <RutaInicial challenge={challenge} userAnswers={userAnswers} onRevisit={revisitRuta} />
         <ConstruyamosSection />
         <Footer />
       </div>
@@ -197,11 +193,7 @@ function BrujulaApp() {
             <ConversationThread messages={messages} />
 
             {step < Math.min(3, challenge.questions.length) && (
-              <AnswerBar
-                key={step}
-                onAnswer={answerCurrent}
-                placeholder="Escribe tu respuesta…"
-              />
+              <AnswerBar key={step} onAnswer={answerCurrent} placeholder="Escribe tu respuesta…" />
             )}
           </div>
         </section>
@@ -233,7 +225,9 @@ function TopBar() {
           </span>
           <span className="flex flex-col leading-none">
             <span className="text-[15px] font-bold tracking-tight">Brújula</span>
-            <span className="text-[10.5px] font-medium text-muted-foreground">Evoluciona con tus ideas</span>
+            <span className="text-[10.5px] font-medium text-muted-foreground">
+              Evoluciona con tus ideas
+            </span>
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-1">
@@ -335,7 +329,8 @@ function Hero({
         </div>
 
         <h1 className="fade-up mt-6 text-[2.25rem] sm:text-5xl font-bold tracking-[-0.03em] leading-[1.08] text-foreground">
-          Las mejores soluciones <span className="text-primary">empiezan entendiendo el desafío.</span>
+          Las mejores soluciones{" "}
+          <span className="text-primary">empiezan entendiendo el desafío.</span>
         </h1>
 
         <form
@@ -471,13 +466,7 @@ function SecondaryCards() {
 
 /* ---------- Conversation ---------- */
 
-function ConversationHeader({
-  challenge,
-  onReset,
-}: {
-  challenge: Challenge;
-  onReset: () => void;
-}) {
+function ConversationHeader({ challenge, onReset }: { challenge: Challenge; onReset: () => void }) {
   const Icon = challenge.icon;
   return (
     <div className="mb-6 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
@@ -519,21 +508,10 @@ function ConversationThread({
   );
 }
 
-function Bubble({
-  role,
-  text,
-  delay,
-}: {
-  role: "brujula" | "user";
-  text: string;
-  delay: number;
-}) {
+function Bubble({ role, text, delay }: { role: "brujula" | "user"; text: string; delay: number }) {
   if (role === "brujula") {
     return (
-      <div
-        className="fade-up flex items-start gap-3"
-        style={{ animationDelay: `${delay}ms` }}
-      >
+      <div className="fade-up flex items-start gap-3" style={{ animationDelay: `${delay}ms` }}>
         <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground">
           <Compass className="h-4 w-4" />
         </span>
@@ -603,13 +581,7 @@ const TAG_STYLE: Record<RouteStage["tag"], string> = {
   Conexión: "bg-foreground text-background",
 };
 
-function RecommendedRoute({
-  challenge,
-  onReset,
-}: {
-  challenge: Challenge;
-  onReset: () => void;
-}) {
+function RecommendedRoute({ challenge, onReset }: { challenge: Challenge; onReset: () => void }) {
   return (
     <div className="fade-up mt-10">
       <div className="mb-6 flex items-end justify-between gap-4">
@@ -636,7 +608,9 @@ function RecommendedRoute({
             <div className="card-hover rounded-2xl border border-border bg-card p-4 sm:p-5 shadow-soft">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h4 className="text-[15.5px] font-semibold tracking-tight">{stage.title}</h4>
-                <span className={`rounded-full px-2.5 py-1 text-[10.5px] font-semibold ${TAG_STYLE[stage.tag]}`}>
+                <span
+                  className={`rounded-full px-2.5 py-1 text-[10.5px] font-semibold ${TAG_STYLE[stage.tag]}`}
+                >
                   {stage.tag}
                 </span>
               </div>
@@ -776,7 +750,9 @@ function CapacidadesSection() {
   return (
     <section id="capacidades" className="border-t border-border bg-surface">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:py-24">
-        <h2 className="text-center text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Capacidades</h2>
+        <h2 className="text-center text-3xl sm:text-4xl font-bold tracking-[-0.02em]">
+          Capacidades
+        </h2>
         <div className="mt-12 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {CAPACIDADES.map((c, i) => (
             <ExpandableCard
@@ -829,7 +805,10 @@ function ConstruyamosSection() {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ nombre: "", organizacion: "", correo: "", mensaje: "" });
   return (
-    <section id="construyamos" className="border-t border-border bg-primary text-primary-foreground">
+    <section
+      id="construyamos"
+      className="border-t border-border bg-primary text-primary-foreground"
+    >
       <div className="mx-auto max-w-6xl px-5 py-20 sm:py-24">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
@@ -884,10 +863,26 @@ function ConstruyamosSection() {
               >
                 <h3 className="text-lg font-bold">Iniciar una conversación</h3>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <Field label="Nombre" value={form.nombre} onChange={(v) => setForm({ ...form, nombre: v })} required />
-                  <Field label="Organización" value={form.organizacion} onChange={(v) => setForm({ ...form, organizacion: v })} required />
+                  <Field
+                    label="Nombre"
+                    value={form.nombre}
+                    onChange={(v) => setForm({ ...form, nombre: v })}
+                    required
+                  />
+                  <Field
+                    label="Organización"
+                    value={form.organizacion}
+                    onChange={(v) => setForm({ ...form, organizacion: v })}
+                    required
+                  />
                 </div>
-                <Field label="Correo" type="email" value={form.correo} onChange={(v) => setForm({ ...form, correo: v })} required />
+                <Field
+                  label="Correo"
+                  type="email"
+                  value={form.correo}
+                  onChange={(v) => setForm({ ...form, correo: v })}
+                  required
+                />
                 <div>
                   <label className="mb-1.5 block text-[13px] font-semibold text-foreground">
                     ¿En qué estás pensando?
@@ -952,15 +947,25 @@ function Footer() {
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto max-w-6xl px-5 py-10 flex flex-col items-center gap-8 text-center">
         <p className="text-[13px] leading-relaxed text-muted-foreground/80 max-w-3xl">
-          Una iniciativa de la Corporación Universitaria Empresarial Alexander von Humboldt y EmprendeLab para conectar los desafíos de las organizaciones con el conocimiento de la universidad.
+          Una iniciativa de la Corporación Universitaria Empresarial Alexander von Humboldt y
+          EmprendeLab para conectar los desafíos de las organizaciones con el conocimiento de la
+          universidad.
         </p>
         <div className="flex items-center justify-center gap-5 opacity-90">
           <div className="flex items-center justify-center rounded-lg bg-surface-elevated border px-3 h-16">
-            <img src={humboldtLogo.url} alt="Corporación Universitaria Empresarial Alexander von Humboldt" className="h-12 w-auto object-contain" />
+            <img
+              src={humboldtLogo.url}
+              alt="Corporación Universitaria Empresarial Alexander von Humboldt"
+              className="h-12 w-auto object-contain"
+            />
           </div>
           <span className="h-12 w-px bg-border" />
           <div className="flex items-center justify-center rounded-lg bg-surface-elevated border px-3 h-16">
-            <img src={emprendelabLogo.url} alt="EmprendeLab" className="h-11 w-auto object-contain" />
+            <img
+              src={emprendelabLogo.url}
+              alt="EmprendeLab"
+              className="h-11 w-auto object-contain"
+            />
           </div>
         </div>
       </div>

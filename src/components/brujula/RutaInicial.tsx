@@ -10,11 +10,7 @@ import {
   RotateCcw,
   Sparkles,
 } from "lucide-react";
-import {
-  FORMAS_CONSTRUIR,
-  rutaForChallenge,
-  type Challenge,
-} from "@/lib/brujula-data";
+import { FORMAS_CONSTRUIR, rutaForChallenge, type Challenge } from "@/lib/brujula-data";
 
 interface Props {
   challenge: Challenge;
@@ -105,10 +101,7 @@ export function RutaInicial({ challenge, userAnswers, onRevisit }: Props) {
 
   return (
     <div className="fade-in-slow bg-background">
-      <article
-        id="ruta-inicial-print"
-        className="mx-auto max-w-4xl px-5 sm:px-10 py-14 sm:py-20"
-      >
+      <article id="ruta-inicial-print" className="mx-auto max-w-4xl px-5 sm:px-10 py-14 sm:py-20">
         {/* Encabezado */}
         <header className="border-b border-border pb-10">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">
@@ -118,10 +111,9 @@ export function RutaInicial({ challenge, userAnswers, onRevisit }: Props) {
             Tu Ruta Inicial está lista
           </h1>
           <p className="mt-6 text-[15.5px] sm:text-[16.5px] leading-relaxed text-muted-foreground max-w-3xl">
-            Gracias por compartir el desafío de tu organización. Con base en la información
-            que nos proporcionaste construimos una primera ruta que puede servir como punto
-            de partida para identificar oportunidades de mejora y posibles alternativas de
-            trabajo conjunto.
+            Gracias por compartir el desafío de tu organización. Con base en la información que nos
+            proporcionaste construimos una primera ruta que puede servir como punto de partida para
+            identificar oportunidades de mejora y posibles alternativas de trabajo conjunto.
           </p>
           <p className="mt-3 text-[13.5px] leading-relaxed text-muted-foreground/80 max-w-3xl italic">
             Esta ruta representa una orientación inicial y no reemplaza un diagnóstico detallado.
@@ -186,9 +178,7 @@ export function RutaInicial({ challenge, userAnswers, onRevisit }: Props) {
                   <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary-soft text-primary">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <h4 className="mt-4 text-[16.5px] font-semibold tracking-tight">
-                    {cap.titulo}
-                  </h4>
+                  <h4 className="mt-4 text-[16.5px] font-semibold tracking-tight">{cap.titulo}</h4>
                 </div>
               );
             })}
@@ -216,9 +206,7 @@ export function RutaInicial({ challenge, userAnswers, onRevisit }: Props) {
                   </span>
                   <h4 className="text-[14.5px] font-semibold tracking-tight">{f.titulo}</h4>
                 </div>
-                <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
-                  {f.desc}
-                </p>
+                <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -320,9 +308,9 @@ export function RutaInicial({ challenge, userAnswers, onRevisit }: Props) {
                   Recibe esta Ruta Inicial en tu correo
                 </h4>
                 <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
-                  Si deseas conservar esta Ruta Inicial y recibirla en tu correo, compártenos
-                  estos datos. También nos permitirán preparar una conversación mucho más útil
-                  si decides continuar.
+                  Si deseas conservar esta Ruta Inicial y recibirla en tu correo, compártenos estos
+                  datos. También nos permitirán preparar una conversación mucho más útil si decides
+                  continuar.
                 </p>
 
                 <div className="mt-5 grid gap-3">

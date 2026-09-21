@@ -83,7 +83,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Brújula es una experiencia conversacional que ayuda a las organizaciones a descubrir rutas para resolver sus desafíos junto con la universidad.",
       },
-      { property: "og:title", content: "Brújula — Las mejores soluciones empiezan entendiendo el desafío" },
+      {
+        property: "og:title",
+        content: "Brújula — Las mejores soluciones empiezan entendiendo el desafío",
+      },
       {
         property: "og:description",
         content:
@@ -91,10 +94,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Brújula — Las mejores soluciones empiezan entendiendo el desafío" },
-      { name: "twitter:description", content: "Brújula es una experiencia conversacional que ayuda a las organizaciones a descubrir rutas para resolver sus desafíos junto con la universidad." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2adcdc76-a2c9-4821-9b3b-e3e444184483/id-preview-90868994--19422f2a-aa10-4bd0-8837-5ada11c5a437.lovable.app-1784415996155.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2adcdc76-a2c9-4821-9b3b-e3e444184483/id-preview-90868994--19422f2a-aa10-4bd0-8837-5ada11c5a437.lovable.app-1784415996155.png" },
+      {
+        name: "twitter:title",
+        content: "Brújula — Las mejores soluciones empiezan entendiendo el desafío",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Brújula es una experiencia conversacional que ayuda a las organizaciones a descubrir rutas para resolver sus desafíos junto con la universidad.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2adcdc76-a2c9-4821-9b3b-e3e444184483/id-preview-90868994--19422f2a-aa10-4bd0-8837-5ada11c5a437.lovable.app-1784415996155.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2adcdc76-a2c9-4821-9b3b-e3e444184483/id-preview-90868994--19422f2a-aa10-4bd0-8837-5ada11c5a437.lovable.app-1784415996155.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

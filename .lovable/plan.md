@@ -37,11 +37,13 @@ Transformar el cierre de la conversación en una devolución consultiva de alta 
 ## Fase 2 — Envío real de correos (siguiente turno, requiere confirmación)
 
 Para enviar realmente:
+
 - **Correo al usuario** con su Ruta Inicial.
 - **Notificación al correo institucional** (empresa, contacto, correo, ruta, desafío, fecha).
 - **Persistencia** de contactos y conversaciones.
 
 Esto requiere:
+
 - Habilitar **Lovable Cloud** (para guardar leads y disparar server functions).
 - Configurar un **dominio de email** (necesario para poder enviar correos con tu marca; sin dominio no se pueden enviar emails de la app).
 - Definir el correo institucional destino.

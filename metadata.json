@@ -1,0 +1,6 @@
+{
+  "name": "Brújula",
+  "description": "Experiencia conversacional que ayuda a las organizaciones a descubrir rutas para resolver sus desafíos junto con la universidad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
